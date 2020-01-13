@@ -4,6 +4,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const environment = process.env.NODE_ENV || 'development';
 const configuration = require('./knexfile')[environment];
+const fs = require("fs"); //fs built into node
+const fastcsv = require("fast-csv");
 var indexRouter = require('./routes/index');
 var app = express();
 
