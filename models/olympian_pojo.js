@@ -14,5 +14,13 @@ class Olympian{
      .where('age', data[0].min);
    })
  }
+
+ static getOldest(){
+   return database('olympians').max('age').then(function(data){
+    return database('olympians').columns(['name', 'sex', 'age', 'team', 'sport', 'medal'])
+     .where('age', data[0].max);
+   })
+ }
+
 }
 module.exports = Olympian
