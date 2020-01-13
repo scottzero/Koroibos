@@ -15,7 +15,7 @@ let csvStream = fastcsv
 
     // create a new connection to the database
     const pool = new Pool({
-      host: "localhost",
+      host: "postgres://localhost/olympians",
       user: "postgres",
       database: "olympians",
       port: 5432
