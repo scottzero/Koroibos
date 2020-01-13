@@ -9,3 +9,4 @@ seeded database with
 olympians-# \copy olympians (name,sex,age,height,weight,team,games,sport,event,medal) FROM 'data.csv' WITH DELIMITER ',' CSV HEADER;
 -added dependencies for middle ware,
 -finish file setup for routes,
+- \c olympians to change into olympians database in psql
