@@ -4,10 +4,13 @@
   "description": "Started Readme using Node with express framework and knex database",
   "main": "app.js",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
     "fast-csv": "^4.0.2",
+    "cookie-parser": "^1.4.4",
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "knex": "^0.20.7",
+    "morgan": "^1.9.1",
     "pg": "^7.17.1"
   },
   "devDependencies": {},
@@ -19,7 +22,7 @@
     "url": "git+https://github.com/scottzero/Koroibos.git"
   },
   "keywords": [],
-  "author":  ,
+  "author": "scottzero",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/scottzero/Koroibos/issues"
