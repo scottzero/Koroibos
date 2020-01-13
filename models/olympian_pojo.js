@@ -4,10 +4,9 @@ const database = require('../config')
 class Olympian{
   constructor(){
   }
- getOlympians() {
-   console.log("THISSSS");
+ static getOlympians() {
     return database('olympians').columns(['name', 'sex', 'age', 'height', 'weight', 'team', 'games', 'sport', 'event', 'medal'])
   }
 
 }
-module.exports = Song
+module.exports = Olympian
