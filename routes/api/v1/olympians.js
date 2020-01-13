@@ -20,6 +20,20 @@ router.get('/', (request, response)=>{
       }
     ).catch(error => response.status(500).send(error));
 
+  }else if(request.query.age == "oldest"){
+    // -----------------------------------
+    // HANDLE OLDEST OLYMPIAN
+    // ----------------------------------
+    olympian.getOldest().then(
+      data => {
+        if (data.length) {
+          response.status(200).send(data)
+        } else {
+          response.status(200).send({message: "Could not find youngest olympian."})
+        }
+      }
+    ).catch(error => response.status(500).send(error));
+
   }else{
   // -----------------------------------
   // HANDLE ALL OLYMPIANS
