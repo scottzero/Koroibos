@@ -144,3 +144,60 @@ describe('Test GET /api/v1/olympians?age=oldest path', () => {
       expect(res.body.message).toBe("Could not find oldest olympian. Probably none in the db.");
   });
 });
+// -----------------------------------
+// SAD PATH OLYMPIAN STATS
+//------------------------------------
+describe('Test GET /api/v1/olympian_stats path', () => {
+    it('sad path, no olympians stats in test db', async () => {
+      await database.raw('truncate table olympians cascade');
+      const res = await request(app).get("/api/v1/olympian_stats");
+      expect(res.statusCode).toBe(500);
+  });
+});
+// -----------------------------------
+// HAPPY PATH OLYMPIAN STATS
+//------------------------------------
+describe('Test GET /api/v1/olympian_stats path', () => {
+    it('happy path, olympian stats in test db', async () => {
+      let olympian1 = {
+       id: 3,
+       name: 'scott',
+       sex: 'M',
+       age: 27,
+       height: 90,
+       weight: 190,
+       team: "na",
+       games: "na",
+       sport: "na",
+       event: "na",
+       medal: "na"
+     };
+     let olympian2 = {
+      id: 4,
+      name: 'barb',
+      sex: 'F',
+      age: 69,
+      height: 90,
+      weight: 190,
+      team: "na",
+      games: "na",
+      sport: "na",
+      event: "na",
+      medal: "na"
+    };
+    let expected ={
+    "olympian_stats": {
+        "total_competing_olympians": 2,
+        "average_weight": {
+            "unit": "kg",
+            "male_olympians": null,
+            "female_olympians": null
+        },
+        "average_age": 48
+      }
+    };
+      const res = await request(app).get("/api/v1/olympian_stats");
+      expect(res.statusCode).toBe(200);
+      expect(res.body[0]).toEqual(expected);
+  });
+});
