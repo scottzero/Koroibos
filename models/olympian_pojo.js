@@ -59,5 +59,25 @@ averageAge(){
    }]//end statobj
    return statObj;
  }//end getStats
+
+
+// -----------------------------------
+// EVENTS FUNCTION
+//------------------------------------
+ eventsAll(){
+  return database('olympians').select('sport', database.raw('ARRAY_AGG(DISTINCT olympians.event) as events'))
+  .groupBy('sport').orderBy('sport')
+  }//end events
+  // -----------------------------------
+  // ORGANIZER FUNCTION
+  //------------------------------------
+ static async organizer(){
+   let olympian = new Olympian
+   let data = await [{
+     "events": await olympian.eventsAll().then(res=>res)
+   }]
+   // console.log(data[0])
+   return data
+ }// end function
 }//end class
 module.exports = Olympian
