@@ -13,13 +13,16 @@
     "morgan": "^1.9.1",
     "pg": "^7.17.1"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0",
+    "nodemon": "^2.0.2",
+    "shelljs": "^0.8.3",
+    "supertest": "^4.0.2"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/scottzero/Koroibos.git",
+    "url": "git+https://github.com/scottzero/Koroibos.git"
   },
   "keywords": [],
   "author": "scottzero",
