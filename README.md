@@ -71,6 +71,24 @@ GET api/v1/olympians?age=oldest
   ]
 }
 ```
+4. Getting olympian statistics: 
+```
+GET api/v1/olympian_stats
+```
+```
+//Response format
+  {
+    "olympian_stats": {
+      "total_competing_olympians": 3120
+      "average_weight:" {
+        "unit": "kg",
+        "male_olympians": 75.4,
+        "female_olympians": 70.2
+      }
+      "average_age:" 26.2
+    }
+  }
+```
 # For Developers: Testing
 - For testing I used Jest with the following dependencies:
 ```
