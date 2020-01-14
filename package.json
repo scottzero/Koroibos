@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Started Readme using Node with express framework and knex database",
   "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "jest --config ./jest.config.js --forceExit --coverage --runInBand"
+  },
   "dependencies": {
     "fast-csv": "^4.0.2",
     "cookie-parser": "^1.4.4",
@@ -13,9 +17,11 @@
     "morgan": "^1.9.1",
     "pg": "^7.17.1"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0",
+    "shelljs": "^0.8.3",
+    "supertest": "^4.0.2"
   },
   "repository": {
     "type": "git",
