@@ -11,8 +11,12 @@ const olympian = require('../../../models/olympian_pojo');
 // -----------------------------------
 router.get('/', (request, response)=> {
   var statResolver = olympian.getStats().then(
-    data =>{
-      response.status(200).send(data)
+    data => {
+      if(data.length){
+      response.status(200).send(data[0])
+    }else{
+      response.status(404).send("No olympian stats found. Nothing in the database.")
+      }
     }
   ).catch(error => response.status(500).send(error));
 })
