@@ -20,7 +20,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Routes
-app.listen(3000, '127.0.0.1');
 app.use('/', indexRouter);
 app.use('/api/v1/olympians', olympiansRouter);
 
