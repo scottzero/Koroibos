@@ -89,6 +89,38 @@ GET api/v1/olympian_stats
     }
   }
 ```
+5. Getting olympian events: 
+```
+GET api/v1/events
+```
+```
+//Response Format
+{
+  "events":
+    [
+      {
+        "sport": "Archery",
+        "events": [
+          "Archery Men's Individual",
+          "Archery Men's Team",
+          "Archery Women's Individual",
+          "Archery Women's Team"
+        ]
+      },
+      {
+        "sport": "Badminton",
+        "events": [
+          "Badminton Men's Doubles",
+          "Badminton Men's Singles",
+          "Badminton Women's Doubles",
+          "Badminton Women's Singles",
+          "Badminton Mixed Doubles"
+        ]
+      },
+      {...}
+    ]
+}
+```
 # For Developers: Testing
 - For testing I used Jest with the following dependencies:
 ```
