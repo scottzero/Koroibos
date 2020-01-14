@@ -54,7 +54,7 @@ averageAge(){
          "male_olympians": await obj.maleOlympians().then(res=>res[0].avg),
          "female_olympians": await obj.femaleOlympians().then(res=>res[0].avg)
        },//end avg weight
-       "average_age": await obj.averageAge().then(res=>res)
+       "average_age": await obj.averageAge().then(res=>res[0].avg.toFixed(1))
      }// end "olympian_stats" key
    }//end statobj
    return statObj;
