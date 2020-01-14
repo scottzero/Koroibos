@@ -1,5 +1,5 @@
 // Update with your config settings.
-
+require('dotenv').config();
 module.exports = {
 
   development: {
@@ -41,4 +41,4 @@ module.exports = {
       directory: './db/migrations'
     }
   }
-  };
+};
