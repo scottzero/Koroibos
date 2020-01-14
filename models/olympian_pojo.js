@@ -46,7 +46,7 @@ averageAge(){
 
  static async getStats(){
    const obj = new Olympian
-   let statObj = await {
+   let statObj = await [{
      "olympian_stats":{
        "total_competing_olympians": await obj.allOlympiansUnique().then(res=>res.length),
        "average_weight":{
@@ -56,7 +56,7 @@ averageAge(){
        },//end avg weight
        "average_age": await obj.averageAge().then(res=>res[0].avg.toFixed(1))
      }// end "olympian_stats" key
-   }//end statobj
+   }]//end statobj
    return statObj;
  }//end getStats
 }//end class
