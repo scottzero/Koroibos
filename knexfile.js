@@ -10,7 +10,14 @@ module.exports = {
     },
     useNullAsDefault: true
   },
-
+  test: {
+    client: 'pg',
+    connection: 'postgres://localhost/olympians',
+    migrations: {
+      directory: './db/migrations'
+    },
+    useNullAsDefault: true
+  },
   staging: {
     client: 'postgresql',
     connection: {
