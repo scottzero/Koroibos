@@ -44,8 +44,20 @@ averageAge(){
 // Generate return obj
 //------------------------------------
 
- static getStats(){
-   
- }
+ static async getStats(){
+   const obj = new Olympian
+   let statObj = await {
+     "olympian_stats":{
+       "total_competing_olympians": await obj.allOlympiansUnique().then(res=>res.length),
+       "average_weight":{
+         "unit": "kg",
+         "male_olympians": await obj.maleOlympians().then(res=>res[0].avg),
+         "female_olympians": await obj.femaleOlympians().then(res=>res[0].avg)
+       },//end avg weight
+       "average_age": await obj.averageAge().then(res=>res)
+     }// end "olympian_stats" key
+   }//end statobj
+   return statObj;
+ }//end getStats
 }//end class
 module.exports = Olympian
