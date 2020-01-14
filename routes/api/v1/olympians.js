@@ -15,7 +15,7 @@ router.get('/', (request, response)=>{
         if (data.length) {
           response.status(200).send(data)
         } else {
-          response.status(200).send({message: "Could not find youngest olympian."})
+          response.status(404).send({message: "Could not find youngest olympian. Probably none in the db."})
         }
       }
     ).catch(error => response.status(500).send(error));
@@ -29,7 +29,7 @@ router.get('/', (request, response)=>{
         if (data.length) {
           response.status(200).send(data)
         } else {
-          response.status(200).send({message: "Could not find youngest olympian."})
+          response.status(404).send({message: "Could not find oldest olympian. Probably none in the db."})
         }
       }
     ).catch(error => response.status(500).send(error));
@@ -44,7 +44,7 @@ router.get('/', (request, response)=>{
           if (data.length) {
             response.status(200).send(data)
           } else {
-            response.status(200).send({message: "No olympians seeded in db."})
+            response.status(404).send({message: "No olympians seeded in db."})
           }
         }
       ).catch(error => response.status(500).send(error));
