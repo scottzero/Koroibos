@@ -1,5 +1,5 @@
 # Koroibos Challenge 
-This is Node Express api built to expose data from the 2016 Summer Olympics. 
+This is a Node Express api built to expose data from the 2016 Summer Olympics. 
 
 ## Getting Started
 - Production: https://boiling-depths-54207.herokuapp.com
