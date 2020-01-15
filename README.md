@@ -1,8 +1,9 @@
 # Koroibos Challenge 
-Our company is currently working to build a live Olympic Analytics tracker for the 2020 Summer Games. As part of our application, we want to include historical data from the 2016 Summer Olympics.
+This is Node Express api built to expose data from the 2016 Summer Olympics. 
 
 ## Getting Started
 - Production: https://boiling-depths-54207.herokuapp.com
+- You can hit the endpoints in your browser 
 - Postman can also be used to make requests: https://www.getpostman.com/
 
 ## Endpoints
