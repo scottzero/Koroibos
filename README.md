@@ -1,5 +1,7 @@
 # Koroibos Challenge 
-This is a Node Express api built to expose data from the 2016 Summer Olympics. 
+This is a Node Express api built to expose data from the 2016 Summer Olympics. It was issued as a 48 take home challenge by Turing School of Software and Design as the final module solo project. 
+
+Status: Refactor
 
 ## Getting Started
 - Production: https://boiling-depths-54207.herokuapp.com
