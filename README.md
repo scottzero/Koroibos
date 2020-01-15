@@ -16,6 +16,11 @@ Status: Refactor
 "shelljs": "^0.8.3",
 "supertest": "^4.0.2"
 ```
+- To run tests:
+```
+$ knex migrate:latest --env test
+$ npm test
+```
 
 - Clone down the repo and run the following commands: 
 
@@ -32,7 +37,6 @@ $\q
 ```
 $ npm install
 $ knex migrate:latest
-$ knex migrate:latest --env test
 ```
 
 You want to make sure your database gets populated properly, run the following commands in CLI:
