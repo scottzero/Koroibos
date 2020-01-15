@@ -8,6 +8,23 @@ Status: Refactor
 - You can hit the endpoints in your browser 
 - Postman can also be used to make requests: https://www.getpostman.com/
 
+# For Developers: Testing
+- For testing I used Jest with the following dependencies:
+```
+"babel-jest": "^24.9.0",
+"jest": "^24.9.0",
+"shelljs": "^0.8.3",
+"supertest": "^4.0.2"
+```
+
+- Clone down the repo and run the following commands: 
+```
+$ npm install
+$ knex migrate:latest
+$ knex migrate:latest --env test
+$ npm start
+```
+
 ## Endpoints
 
 1. Getting all olympians:
@@ -124,22 +141,7 @@ GET api/v1/events
     ]
 }
 ```
-# For Developers: Testing
-- For testing I used Jest with the following dependencies:
-```
-"babel-jest": "^24.9.0",
-"jest": "^24.9.0",
-"shelljs": "^0.8.3",
-"supertest": "^4.0.2"
-```
 
-- Clone down the repo and run the following commands: 
-```
-$ npm install
-$ knex migrate:latest
-$ knex migrate:latest --env test
-$ npm test
-```
 
 ## Core contriutor
 
