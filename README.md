@@ -18,12 +18,39 @@ Status: Refactor
 ```
 
 - Clone down the repo and run the following commands: 
+
+## database 
+
+1. Create the database, run this in the CLI with psql installed:
+```
+$ psql
+$ create database olympians;
+$\q
+```
+
+2. We need to run the migrations to create the olympians table to store the data:
 ```
 $ npm install
 $ knex migrate:latest
 $ knex migrate:latest --env test
-$ npm start
 ```
+
+You want to make sure your database gets populated properly, run the following commands in CLI:
+
+```
+$ psql
+$ \c olympians
+$ \copy olympians (name,sex,age,height,weight,team,games,sport,event,medal) FROM 'data.csv' WITH DELIMITER ',' CSV HEADER;
+$select * from olympians; 
+```
+
+Your olympians table should now be populated, below is the schema output from our migration:
+
+## Schema 
+
+<img width="171" alt="Screen Shot 2020-01-15 at 7 57 08 AM" src="https://user-images.githubusercontent.com/33855435/72444133-ba4fa980-376c-11ea-8f0c-7379fc4743bd.png">
+
+
 
 ## Endpoints
 
